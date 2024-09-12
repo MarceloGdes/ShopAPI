@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Shop.Api.Database;
 using Shop.Api.Database.Context;
+using Shop.Application.Commands;
+using Shop.Domain.Interfaces;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System;
 using System.Collections.Generic;
@@ -33,6 +35,7 @@ namespace Shop.Api
             services.AddControllers();
 
             services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase("TesteDb"));
+            services.AddTransient<IProdutoCommand, ProdutoCommand>(); // Injetando a dependencia  
 
             services.AddSwaggerGen(setup =>
             {

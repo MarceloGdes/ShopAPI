@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Shop.Api.Database.Context;
+using Shop.Domain.Entidades;
 
 namespace Shop.Api.Database;
 

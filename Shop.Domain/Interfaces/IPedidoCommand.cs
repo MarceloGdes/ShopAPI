@@ -5,10 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Shop.Domain.Dtos;
 
-namespace Shop.Domain.Interfaces
+namespace Shop.Domain.Interfaces;
+public interface IPedidoCommand
 {
-    public interface IAlterarProdutoCommand
-    {
-        void AterarProduto(AlterarProdutoDto dto);
-    }
+    List<ObterPedidosDto> ObterPedidos();
 }
